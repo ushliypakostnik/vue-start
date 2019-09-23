@@ -1,22 +1,14 @@
 <template>
   <Page class="page404">
-    <div class="container">
-      <Logo />
-      <h1>404</h1>
-      <h3>Page not found!!!</h3>
-    </div>
+    <h1>404</h1>
+    <h3>Page not found!!!</h3>
   </Page>
 </template>
 
 <script>
-import Logo from '@/components/Views/Logo.vue';
 
 export default {
   name: 'NotFound',
-
-  components: {
-    Logo,
-  },
 };
 </script>
 
