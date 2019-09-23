@@ -7,38 +7,14 @@
 //////////////////////////////////////////////////////
 // Breackpoins in styles/utils/_variables.scss
 
-@mixin lg {
-  @media only screen and (min-width: $breackpoint_lg) {
-    @content;
-  }
-}
-
-@mixin not-lg {
-  @media only screen and (max-width: $breackpoint_md_max) {
-    @content;
-  }
-}
-
-@mixin sm {
-  @media only screen and (min-width: $breackpoint_sm) and (max-width: $breackpoint_sm_max) {
-    @content;
-  }
-}
-
-@mixin xs {
-  @media only screen and (max-width: $breackpoint_xs_max) {
-    @content;
-  }
-}
-
 @mixin not-xs {
   @media only screen and (min-width: $breackpoint_sm) {
     @content;
   }
 }
 
-@mixin sm-and-xs {
-  @media only screen and (max-width: $breackpoint_sm_max) {
+@mixin xs {
+  @media only screen and (max-width: $breackpoint_xs_max) {
     @content;
   }
 }
@@ -69,6 +45,21 @@
   height: $height;
 }
 
+// Buttons
+@mixin btn-color($color, $background) {
+  background-color: $background;
+  color: $color;
+  will-change: background;
+  @include transitions(background);
+
+  &:hover,
+  &:active {
+    background-color: darken($background, $fade-percent);
+    color: $color;
+  }
+}
+
+// Links
 @mixin link-color($color, $color-hover) {
   will-change: color;
   @include transitions(color);
@@ -81,19 +72,6 @@
   &:hover,
   &:active {
     color: $color-hover;
-  }
-}
-
-@mixin btn-color($color, $background) {
-  background-color: $background;
-  color: $color;
-  will-change: background;
-  @include transitions(background);
-
-  &:hover,
-  &:active {
-    background-color: darken($background, $fade-percent);
-    color: $color;
   }
 }
 

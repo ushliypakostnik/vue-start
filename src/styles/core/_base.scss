@@ -14,7 +14,7 @@ html {
 body {
   min-height: 100%;
   color: $color_text;
-  background: $color_background;
+  background: $color_white;
   margin: 0;
   padding: 0;
   quotes: "\00ab" "\00bb";
@@ -28,7 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   ::selection {
-    background: fade-out($color_second, $fade * 3);
+    background: fade-out($color_active, $fade * 3);
   }
 }
 
@@ -72,28 +72,28 @@ a {
   @include link-color($color_link, $color_link-hover);
 }
 
-
 // Buttons
 
 button {
   cursor: pointer;
   border: none;
-  text-transform: uppercase;
-  border-radius: $border-radius_large;
+  border-radius: $border-radius_base;
   padding: $btn_padding_horizontal_base $btn_padding_vertical_base;
   @include btn-color($color_white, $color_primary);
-  @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+  @include text($font-family_sans_ui, $font-size_small, $font-weight_sans_ui_regular);
 }
 
 
 // Controls
 
+
 input {
   height: $input_height;
-  border-radius: $border-radius_small;
+  border-radius: $border-radius_base;
   padding: 0 ($gutter / 2);
-  @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
 }
+
 
 textarea {
   width: 100%;
@@ -137,36 +137,3 @@ iframe {
 
 // stylelint-enable no-descending-specificity
 // stylelint-disable
-
-// WebKit Scrollbar
-//////////////////////////////////////////////////////
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: $gutter / 2;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: $color_primary;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $color_text;
-}
-
-// Customize Placeholder
-//////////////////////////////////////////////////////
-
-::-webkit-input-placeholder {color: $color_placeholder !important;}
-::-moz-placeholder          {color: $color_placeholder !important;} /* Firefox 19+ */
-:-moz-placeholder           {color: $color_placeholder !important;} /* Firefox 18- */
-:-ms-input-placeholder      {color: $color_placeholder !important;}
-
-:focus::-webkit-input-placeholder {color: transparent;}
-:focus::-moz-placeholder          {color: transparent;}
-:focus:-moz-placeholder           {color: transparent;}
-:focus:-ms-input-placeholder      {color: transparent;}
-
-// stylelint-enable
