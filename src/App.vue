@@ -10,8 +10,8 @@ export default {
 };
 </script>
 
-<style src="./styles/_stylebase.scss" lang="scss">
+<style src="./styles/_main.scss" lang="scss">
   #app {
-    min-height: 100%;
+    min-height: 100vh;
   }
 </style>

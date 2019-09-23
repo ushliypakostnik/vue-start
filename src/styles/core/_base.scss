@@ -108,9 +108,9 @@ ul {
   margin: 0;
 
   // For classic style
-  &.list-style {
-    @extend %list-style;
-  }
+  // &.list-style {
+  //  @extend %list-style;
+  // }
 }
 
 
