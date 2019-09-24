@@ -3,6 +3,51 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
+// Elements
+//////////////////////////////////////////////////////
+
+// Links
+a {
+  text-decoration: none;
+  @include link-color($color_link, $color_link-hover);
+}
+
+// Buttons
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: $border-radius_base;
+  padding: $btn_padding_horizontal_base $btn_padding_vertical_base;
+  @include btn-color($color_white, $color_primary);
+  @include text($font-family_sans_ui, $font-size_small, $font-weight_sans_ui_regular);
+}
+
+// Controls
+
+input {
+  height: $input_height;
+  border-radius: $border-radius_base;
+  padding: 0 ($gutter / 2);
+  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  // For classic style
+  // &.list-style {
+  //  @extend %list-style;
+  // }
+}
+
 .subheader {
   width: 100%;
   display: flex;
