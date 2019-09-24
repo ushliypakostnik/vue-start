@@ -14,3 +14,15 @@
     padding-right: $gutter / 2;
   }
 }
+
+// Amimation class example
+.pulse {
+  $fadetransition-duration: $transition-duration * 2;
+  will-change: transform, opacity;
+  @include animations("pulse #{$transition-duration} infinite", "fadeOn #{$fadetransition-duration} forwards");
+}
+
+.pulse-slow {
+  will-change: transform;
+  animation: pulse ($transition-duration * 5) infinite;
+}

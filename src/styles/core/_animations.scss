@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////
 
 // Multiply Animation Mixin
-@mixin animation($animate...) {
+@mixin animations($animate...) {
   $max: length($animate);
   $animations: "";
 
