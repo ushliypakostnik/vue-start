@@ -12,13 +12,6 @@ $gutter: 32px;
 // Inputs
 $input_height: 38px;
 
-// LeftSideBar
-$left-sidebar_width: 272px;
-$left-sidebar_width_min: 50px;
-
-// TopBar
-$top-bar_height: 49px;
-
 
 // Colors
 //////////////////////////////////////////////////////
@@ -35,10 +28,6 @@ $color_orange: #fc7907;
 $color_red: #ef5a99;
 
 $color_dark: #0a2725;
-
-// Grays
-$color_gray_777: #777777;
-$color_gray_98: #989898;
 
 // Main
 
@@ -66,6 +55,9 @@ $color_placeholder: $color_disabled;
 $color_border: #f3f3f3;
 $color_border_dark: #707070;
 
+$color_shadow: rgba($color_black, 0.15);
+
+
 // Elements
 //////////////////////////////////////////////////////
 
@@ -75,8 +67,8 @@ $border-radius_base: 4px;
 
 // Buttons
 
-$btn_padding_horizontal_base: 8.5px;
-$btn_padding_vertical_base: 42px;
+$btn_padding_horizontal_base: 10px;
+$btn_padding_vertical_base: 6px;
 
 
 // Effects
@@ -88,6 +80,11 @@ $transition_delay: 0s;
 
 $fade: 0.2;
 $fade-percent: 8%;
+
+$shadow_coords-x: 0;
+$shadow_coords-y: 1px;
+$shadow_size: 4px;
+$shadow_stretch: -2px;
 
 
 // Breackpoints and containers
